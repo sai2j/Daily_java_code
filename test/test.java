@@ -1,29 +1,15 @@
-class Alpha
-{
-	public Alpha(String msg)
-	{
-		System.out.println("Alpha "+msg);
-	}
-}
-class Beta extends Alpha
-{
-	public Beta()
-	{
-		super(getMessage());
-		System.out.println("Beta class constructor!!");
-	}
-	
-	public static String getMessage()
-	{
-		return "class constructor";
-	}	
-}
+public class Test {
+    public static void main(String[] args) {
+        int n=4,f=1;
+        for(int i=1;i<=4;i--){
+            f=f*i;
+        }
+        // while(n>1){
+        //     f=f*n;
+        //     n--;
+        // }
+        System.out.println(f);
 
-public class test
-{
-   public static void main(String[] argv) 
-   {
-	   new Beta();
+    }
 
-	}
 }
