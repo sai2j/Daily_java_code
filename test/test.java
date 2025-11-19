@@ -1,15 +1,13 @@
 public class Test {
-    public static void main(String[] args) {
-        int n=4,f=1;
-        for(int i=1;i<=4;i--){
-            f=f*i;
-        }
-        // while(n>1){
-        //     f=f*n;
-        //     n--;
-        // }
-        System.out.println(f);
+          public static void main(String[] args) {
+                    String s1= "java";
+                    String s2 ="java";
+                    String s3= new String("java");
 
-    }
+                    System.out.println(s1==s2);
+                    System.out.println(s1==s3);
+                    System.out.println(s1.equals(s2));
+                    System.out.println(s1.equals(s3));
 
+          }
 }
