@@ -13,7 +13,7 @@ class student {
 
           @Override
           public String toString() {
-                    return "[id=" + id + ", name=" + name + ", fees=" + fees + "";
+                    return "[Id: " + id + ", Name: " + name + ", Fees: " + fees + "";
           }
 
 }
@@ -27,7 +27,7 @@ class Hosteller extends student {
           }
 
           public String toString() {
-                    return toString() + "hostelfees=" + hostelfee + "]";
+                    return super.toString() + ", Hostelfees: " + hostelfee + "]";
           }
 
 }
@@ -41,7 +41,7 @@ class DayScholar extends student {
           }
 
           public String displayetail1() {
-                    return toString() + "transportfee=" + transportfee + "]";
+                    return super.toString() + ", Transportfee: " + transportfee + "]";
           }
 
 }
@@ -49,6 +49,7 @@ class DayScholar extends student {
 public class DayScholarHosteller {
           public static void main(String[] args) {
                     Scanner sc = new Scanner(System.in);
+                    System.out.print("Enter your choice (1/2) : ");
                     int choice = Integer.parseInt(sc.next());
                     if (choice >= 3) {
                               System.out.println("Invalid Choice!");
@@ -56,32 +57,40 @@ public class DayScholarHosteller {
                     }
                     switch (choice) {
                               case 1 -> {
+                                        System.out.print("Enter ID number: ");
                                         int id = Integer.parseInt(sc.next());
+                                        System.out.print("Enter name:");
                                         String name = sc.next();
+                                        System.out.print("Enter your Exam fess: ");
                                         double examFee = Double.parseDouble(sc.next());
+                                        System.out.print("Enter Transport fess: ");
                                         double transportFee = Double.parseDouble(sc.next());
+                                        System.out.print("Enter amount: ");
                                         double amount = Double.parseDouble(sc.next());
                                         if (amount <= 0) {
                                                   System.out.println("amount should be Positive.");
                                                   System.exit(0);
                                         }
-                                        DayScholar scollar = new DayScholar(transportFee, id, name, examFee);
-                                        System.out.println(scollar.displaydetail1());
-                                        scollar.payfee(amount);
+                                        DayScholar scollar = new DayScholar(id, name, examFee, transportFee);
+                                        System.out.println(scollar.displayetail1());         
                               }
                               case 2 -> {
+                                        System.out.print("Enter ID number: ");
                                         int id = Integer.parseInt(sc.next());
+                                        System.out.print("Enter name:");
                                         String name = sc.next();
-                                        Double examFee = Double.parseDouble(sc.next());
-                                        double HosteleFee = Double.parseDouble(sc.next());
+                                        System.out.print("Enter your Exam fess: ");
+                                        double examFee = Double.parseDouble(sc.next());
+                                        System.out.print("Enter Hostel fess: ");
+                                        double hostelFee = Double.parseDouble(sc.next());
+                                        System.out.print("Enter amount: ");
                                         double amount = Double.parseDouble(sc.next());
                                         if (amount <= 0) {
                                                   System.out.println("amount should be Positive.");
                                                   System.exit(0);
                                         }
-                                        Hosteller hostel = new Hosteller(HosteleFee, id, name, examFee);
-                                        System.out.println(hostel.displaydetail2());
-                                        hostel.payfee(amount);
+                                        Hosteller hosteller = new Hosteller(id, name, examFee, hostelFee);
+                                        System.out.println(hosteller.toString());
                               }
                     }
           }
