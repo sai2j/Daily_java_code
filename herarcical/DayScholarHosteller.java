@@ -72,7 +72,7 @@ public class DayScholarHosteller {
                                                   System.exit(0);
                                         }
                                         DayScholar scollar = new DayScholar(id, name, examFee, transportFee);
-                                        System.out.println(scollar.displayetail1());         
+                                        System.out.println(scollar.displayetail1());
                               }
                               case 2 -> {
                                         System.out.print("Enter ID number: ");
@@ -93,5 +93,6 @@ public class DayScholarHosteller {
                                         System.out.println(hosteller.toString());
                               }
                     }
+                    sc.close();
           }
 }
