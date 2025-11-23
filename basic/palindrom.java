@@ -8,6 +8,7 @@ public class palindrom {
                               rev = rev*10 + i%10;
                     }
                     if(rev == num){
+                     
                               System.out.println("palindrom");
                     }
                     else{
