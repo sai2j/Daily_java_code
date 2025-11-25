@@ -1,5 +1,5 @@
 package string;
-public class Compare {
+public class compare {
           public static void main(String[] args) {
                     String s1 = "Sahil";
                     String s2 = "sahil";
