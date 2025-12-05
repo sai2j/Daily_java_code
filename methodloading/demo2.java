@@ -1,7 +1,5 @@
 package methodloading;
 
-import string.startWith;
-
 record Student(int roll, String name) {
 
 }
