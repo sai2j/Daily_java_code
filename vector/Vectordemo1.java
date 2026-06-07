@@ -2,7 +2,7 @@ package vector;
 
 import java.util.Vector;
 
-public class Vectordemo1 {
+public class VectorDemo1 {
           public static void main(String[] args) {
                     Vector<Integer> v = new Vector<>(100, 20);
                     System.out.println("vector capicity: " + v.capacity());

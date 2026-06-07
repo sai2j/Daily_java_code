@@ -1,9 +1,5 @@
-package test;
-
-import java.util.*;
-
-public class test {
+public class PriorityQueueDemo4 {
           public static void main(String[] args) {
-        
+
           }
 }
